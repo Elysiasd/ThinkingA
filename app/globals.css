@@ -981,8 +981,18 @@ input {
   width: 100%;
   min-height: 34px;
   border: 0;
+  border-radius: 6px;
   background: transparent;
   text-align: left;
+}
+
+.file-node:hover {
+  background: #eef4ff;
+}
+
+.file-node-spacer {
+  width: 14px;
+  flex: 0 0 auto;
 }
 
 .preview-panel {
@@ -1001,6 +1011,239 @@ input {
   background: #f7f8fa;
   white-space: pre-wrap;
   overflow-wrap: anywhere;
+}
+
+.preview-empty {
+  display: grid;
+  align-content: center;
+  gap: 18px;
+  min-height: 260px;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: #f8fafc;
+}
+
+.quick-links {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.cli-console-panel {
+  display: grid;
+  gap: 16px;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+}
+
+.cli-console-head,
+.logs-head,
+.console-actions,
+.status-pills,
+.status-card-row,
+.log-tabs {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.cli-console-head {
+  justify-content: space-between;
+}
+
+.status-pill,
+.status-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 38px;
+  padding: 0 14px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: #fff;
+  font-weight: 700;
+}
+
+.status-pill.running,
+.status-chip.active {
+  border-color: #9db8f6;
+  color: var(--blue);
+  background: #f4f7ff;
+}
+
+.status-pill.success,
+.status-chip {
+  color: var(--green);
+}
+
+.status-pill.failed,
+.status-chip.danger {
+  color: var(--danger);
+}
+
+.console-summary-grid {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.8fr) minmax(300px, 1fr) minmax(300px, 0.9fr);
+  gap: 14px;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.console-summary-item {
+  display: grid;
+  gap: 8px;
+}
+
+.console-summary-item code {
+  min-height: 48px;
+  padding: 13px 14px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: #fff;
+  overflow-wrap: anywhere;
+}
+
+.console-body-grid {
+  display: grid;
+  grid-template-columns: minmax(320px, 0.52fr) minmax(0, 1.2fr);
+  gap: 16px;
+}
+
+.steps-panel,
+.logs-panel {
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+}
+
+.step-track {
+  display: grid;
+  gap: 4px;
+  margin-top: 12px;
+}
+
+.step-row {
+  display: grid;
+  grid-template-columns: 30px 1fr auto;
+  gap: 12px;
+  align-items: center;
+  min-height: 66px;
+  padding: 8px 10px;
+  border-radius: 6px;
+}
+
+.step-row.done {
+  background: #f7fbff;
+}
+
+.step-dot {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  color: var(--green);
+}
+
+.step-row p {
+  font-size: 13px;
+}
+
+.step-row small {
+  color: var(--muted);
+}
+
+.logs-head {
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.tab-button,
+.icon-button-inline {
+  min-height: 34px;
+  padding: 0 14px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: #fff;
+  color: #263142;
+  font-weight: 700;
+}
+
+.tab-button.active {
+  border-color: var(--blue);
+  color: var(--blue);
+  background: #f4f7ff;
+}
+
+.icon-button-inline {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.log-viewer {
+  min-height: 330px;
+  padding: 18px 0;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  font-family: Consolas, "Courier New", monospace;
+}
+
+.log-line {
+  display: grid;
+  grid-template-columns: 52px 92px 1fr;
+  gap: 8px;
+  min-height: 30px;
+  padding: 0 18px;
+  align-items: center;
+}
+
+.command-line {
+  grid-template-columns: 1fr;
+  color: #111827;
+  font-weight: 700;
+}
+
+.log-index {
+  color: var(--muted);
+  text-align: right;
+}
+
+.log-tag {
+  color: var(--green);
+}
+
+.log-line.stderr .log-tag,
+.log-line.stderr {
+  color: #d92d20;
+}
+
+.console-footer-note {
+  padding: 12px 14px;
+  border: 1px solid #b9cdfb;
+  border-radius: 6px;
+  background: #f7faff;
+}
+
+.danger-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 46px;
+  padding: 0 22px;
+  border: 1px solid #c7221f;
+  border-radius: 6px;
+  background: #d92d20;
+  color: #fff;
+  font-weight: 800;
 }
 
 .history-layout {
