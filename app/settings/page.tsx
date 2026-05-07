@@ -24,7 +24,7 @@ export default function SettingsPage() {
   const [data, setData] = useState<SettingsResponse | null>(null);
   const [apiKey, setApiKey] = useState("");
   const [model, setModel] = useState("gpt-5.5");
-  const [baseUrl, setBaseUrl] = useState("https://api.jucode.cn/v1");
+  const [baseUrl, setBaseUrl] = useState("https://api.openai.com/v1");
   const [projectRoot, setProjectRoot] = useState("D:\\Program Files (x86)\\ThinkingAP");
   const [busy, setBusy] = useState<"save" | "test" | null>(null);
   const [message, setMessage] = useState("");

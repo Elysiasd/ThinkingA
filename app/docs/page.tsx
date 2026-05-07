@@ -26,7 +26,7 @@ export default function DocsPage() {
 
         <section className="panel docs-section">
           <h2>配置</h2>
-          <p>进入设置页保存 OpenAI API Key、模型、OpenAI-compatible Responses API 请求地址和默认项目根目录。默认请求地址是 <code>https://api.jucode.cn/v1</code>。网页设置页优先于 <code>.env.local</code>，保存后刷新页面即可使用，无需重启开发服务。</p>
+          <p>进入设置页保存 OpenAI API Key、模型、OpenAI 官方 API 请求地址和默认项目根目录。默认请求地址是 <code>https://api.openai.com/v1</code>。网页设置页优先于 <code>.env.local</code>，保存后刷新页面即可使用，无需重启开发服务；如需使用兼容 Responses API 的自定义服务，也可以在设置页手动改写请求地址。</p>
         </section>
       </div>
     </AppFrame>

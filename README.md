@@ -54,14 +54,14 @@ Copy-Item .env.example .env.local
 ```env
 OPENAI_API_KEY=
 OPENAI_MODEL=gpt-5.5
-OPENAI_BASE_URL=https://api.jucode.cn/v1
+OPENAI_BASE_URL=https://api.openai.com/v1
 THINKINGAP_PROJECT_ROOT=D:\Program Files (x86)\ThinkingAP
 ```
 
-其中 `OPENAI_BASE_URL` 是 OpenAI-compatible Responses API 请求地址。当前默认值为：
+其中 `OPENAI_BASE_URL` 是 OpenAI 官方 API 请求地址。当前默认值为：
 
 ```text
-https://api.jucode.cn/v1
+https://api.openai.com/v1
 ```
 
 ## 开发启动
@@ -87,7 +87,7 @@ npm run dev -- --hostname 127.0.0.1 --port 3001
 1. 打开 `http://127.0.0.1:3000`。
 2. 进入“设置”页。
 3. 填写 API Key、模型、API 请求地址和项目根目录。
-4. 推荐 API 请求地址使用 `https://api.jucode.cn/v1`，也可以换成兼容 Responses API 的服务地址。
+4. 默认 API 请求地址使用 OpenAI 官方地址 `https://api.openai.com/v1`；如需自定义兼容 Responses API 的服务，可以在设置页手动改写。
 5. 确认项目根目录，默认是 `D:\Program Files (x86)\ThinkingAP`。
 6. 返回工作台，输入你的项目想法。
 7. 点击生成 Plan & Prompt。

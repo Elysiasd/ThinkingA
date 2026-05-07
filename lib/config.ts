@@ -3,7 +3,7 @@ import { getSetting } from "./db";
 
 export const DEFAULT_PROJECT_ROOT = "D:\\Program Files (x86)\\ThinkingAP";
 export const DEFAULT_MODEL = "gpt-5.5";
-export const DEFAULT_OPENAI_BASE_URL = "https://api.jucode.cn/v1";
+export const DEFAULT_OPENAI_BASE_URL = "https://api.openai.com/v1";
 
 export function getProjectRoot() {
   return (
